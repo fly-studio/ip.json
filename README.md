@@ -1,5 +1,5 @@
 # ip.json(Golang)
-A ip.json web server via [纯真IP](http://www.cz88.net/ip/) 库
+A ip.json web server. ip location used [纯真IP库](http://www.cz88.net/ip/) 
 
 ## Print like 
 ```
@@ -11,7 +11,7 @@ A ip.json web server via [纯真IP](http://www.cz88.net/ip/) 库
 }
 ```
 
-## CLI
+## Cli
 
 ```
 ./ip.json --qqwry /path/to/qqwry.dat --port 8080
@@ -23,9 +23,10 @@ A ip.json web server via [纯真IP](http://www.cz88.net/ip/) 库
 
 ## Nginx conf
 
+If you want to run it under nginx. Add the config like this:
+
 ```
-location = /ip.json
-{
+location = /ip.json {
         proxy_pass http://127.0.0.1:2060;
 
         proxy_redirect off;
